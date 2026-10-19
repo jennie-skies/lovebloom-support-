@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#6c48b8">
+<meta name="description" content="KindHeart offers kind reminders and thoughtful everyday advice requests.">
+<title>KindHeart — A little kindness goes a long way</title>
+<style>
+:root{--purple:#6c48b8;--deep:#34204f;--lav:#f3edff;--pink:#ffe8f1;--ink:#302b3b;--muted:#706b7b;--white:#fff;--line:#e7e0ef}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#fcfaff;color:var(--ink);line-height:1.55}
+header{background:linear-gradient(135deg,#6c48b8,#9270d8);color:white;padding:22px max(20px,calc((100% - 1000px)/2));}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.brand{font-weight:850;font-size:1.45rem;letter-spacing:-.04em}nav a{color:white;text-decoration:none;margin-left:16px;font-size:.95rem}
+main{max-width:1000px;margin:auto;padding:26px 18px 50px}.hero{background:linear-gradient(130deg,#f2eaff,#fff0f6);border-radius:26px;padding:clamp(24px,5vw,54px);display:grid;grid-template-columns:1.3fr .7fr;gap:25px;align-items:center}
+h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;letter-spacing:-.055em;color:var(--deep);margin:10px 0 16px}.lead{font-size:1.1rem;color:#5b5269;max-width:580px}.heart-art{font-size:clamp(5rem,15vw,9rem);text-align:center;filter:drop-shadow(0 12px 12px #6c48b822)}
+button,.button{border:0;border-radius:13px;padding:12px 17px;font:inherit;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}.primary{background:var(--purple);color:white}.secondary{background:white;color:var(--purple);border:1px solid #d8c9f1}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+section{margin-top:34px}h2{color:var(--deep);letter-spacing:-.025em}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:white;border:1px solid var(--line);border-radius:19px;padding:20px;box-shadow:0 8px 25px #39205d08}.emoji{font-size:1.8rem}.price{font-size:1.5rem;font-weight:800;color:var(--purple)}.muted{color:var(--muted);font-size:.93rem}
+form{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;max-width:720px}label{display:block;font-weight:700;margin:15px 0 6px}input,select,textarea{width:100%;padding:12px;border:1px solid #d9d1e2;border-radius:11px;font:inherit;background:#fff}textarea{min-height:130px;resize:vertical}.notice{background:#fff6df;border:1px solid #f0dfa8;padding:14px;border-radius:13px;font-size:.92rem}.success{background:#eaf8ef;border:1px solid #bce6ca;padding:14px;border-radius:12px;margin-top:15px}
+footer{text-align:center;padding:28px 18px;background:#f0eafa;color:#625875;font-size:.9rem}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.heart-art{display:none}.grid{grid-template-columns:1fr}nav a{margin-left:9px}.card{padding:17px}}
+</style>
+</head>
+<body>
+<header><nav><div class="brand">💗 KindHeart</div><div><a href="#encouragement">Encouragement</a><a href="#prices">Prices</a><a href="#advice">Advice request</a></div></nav></header>
+<main>
+<div class="hero">
+ <div><p><strong>A little kindness goes a long way.</strong></p><h1>You don't have to figure it all out today.</h1><p class="lead">A gentle space for positive reminders and thoughtful advice about everyday challenges, school, friendships and personal goals.</p><div class="buttons"><a class="button primary" href="#advice">Request advice</a><a class="button secondary" href="#encouragement">Get encouraged</a></div></div>
+ <div class="heart-art" aria-hidden="true">💜🌷</div>
+</div>
+<section id="encouragement"><h2>A little reminder for today ✨</h2><div class="card"><p id="quote" style="font-size:1.2rem;font-weight:650">Small steps still move you forward.</p><button class="secondary" id="nextQuote" type="button">Another kind reminder</button></div></section>
+<section><h2>How KindHeart helps</h2><div class="grid">
+ <article class="card"><div class="emoji">🌞</div><h3>Encouragement</h3><p class="muted">Positive reminders to brighten an ordinary day.</p></article>
+ <article class="card"><div class="emoji">💌</div><h3>Thoughtful advice</h3><p class="muted">Request a kind, respectful reply from the KindHeart owner.</p></article>
+ <article class="card"><div class="emoji">🌱</div><h3>Small steps</h3><p class="muted">Explore practical ideas for school, friendship and goals.</p></article>
+</div></section>
+<section id="prices"><h2>Simple example prices</h2><p class="muted">These are draft prices for feedback, not an active checkout.</p><div class="grid">
+ <article class="card"><div class="emoji">💗</div><h3>Kind Note</h3><div class="price">KSh 10</div><p class="muted">One encouragement message.</p><a class="button secondary" href="#advice" data-plan="Kind Note">Choose service</a></article>
+ <article class="card"><div class="emoji">💬</div><h3>Advice Request</h3><div class="price">KSh 30</div><p class="muted">One reply about an everyday question.</p><a class="button secondary" href="#advice" data-plan="Advice Request">Choose service</a></article>
+ <article class="card"><div class="emoji">🌷</div><h3>Weekly Boost</h3><div class="price">KSh 100</div><p class="muted">A week of encouragement, with agreed limits.</p><a class="button secondary" href="#advice" data-plan="Weekly Boost">Choose service</a></article>
+</div></section>
+<section id="advice"><h2>Prepare an advice request 💌</h2><p class="muted">This preview does not transmit or store your form. Please do not enter sensitive or identifying information.</p>
+<form id="adviceForm">
+<label for="topic">What would you like advice about?</label><select id="topic" required><option>Friendship</option><option>School and studying</option><option>Confidence and motivation</option><option>Personal goals</option><option>Everyday challenge</option></select>
+<label for="plan">Choose a service</label><select id="plan"><option>Kind Note — KSh 10 (draft)</option><option selected>Advice Request — KSh 30 (draft)</option><option>Weekly Boost — KSh 100 (draft)</option></select>
+<label for="message">Your message</label><textarea id="message" required maxlength="1500" placeholder="Share only what is needed to explain your everyday question."></textarea>
+<div class="notice"><strong>Privacy note:</strong> Do not include your home address, passwords, school location, private photos, or other sensitive information. KindHeart is for general encouragement, not emergency or professional mental-health care.</div>
+<div class="buttons"><button class="primary" type="submit">Prepare request</button><button class="secondary" type="reset">Clear form</button></div>
+<div id="result" aria-live="polite"></div>
+</form></section>
+<section><h2>Contact options</h2><div class="card"><p>When the site is ready for real requests, its owner can add a dedicated business email and a secure request system here.</p><p class="muted">No contact details have been added to this preview. Email and payment features are not connected.</p></div></section>
+</main>
+<footer>💗 KindHeart · Everyone deserves kindness.<br>Preview only — no requests are sent and no payments are collected.</footer>
+<script>
+const quotes=["Small steps still move you forward. 💗","You deserve patience while you learn and grow. 🌷","One difficult day does not define your future. ✨","Your voice matters, and your feelings deserve to be heard. 💜"];
+let q=0;document.getElementById("nextQuote").addEventListener("click",()=>{q=(q+1)%quotes.length;document.getElementById("quote").textContent=quotes[q]});
+document.querySelectorAll("[data-plan]").forEach(a=>a.addEventListener("click",()=>{const sel=document.getElementById("plan");const val=a.dataset.plan;for(const o of sel.options){if(o.text.startsWith(val)){sel.value=o.text;break}}}));
+document.getElementById("adviceForm").addEventListener("submit",e=>{e.preventDefault();document.getElementById("result").className="success";document.getElementById("result").textContent="Demo only: your request has not been sent or saved. In a live version, a secure request system will be connected.";});
+document.getElementById("adviceForm").addEventListener("reset",()=>{document.getElementById("result").textContent="";document.getElementById("result").className="";});
+</script>
+</body></html>
